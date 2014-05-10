@@ -1,0 +1,92 @@
+% this style is based on the example style ceated by Philippe Dreuw and Thomas Deselaers
+\ProvidesPackage{beamerthemeUA-ECE}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mode<presentation>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{uablue}{HTML}{003366}
+\definecolor{uared}{HTML}{AB0520}
+\definecolor{uasilver}{HTML}{E9E7D8}
+
+\setbeamercolor{headline}{bg=uared}
+\setbeamercolor{footline}{bg=uared}
+\setbeamercolor{separation line}{bg=uablue}
+\setbeamercolor{headline text}{fg=white}
+\setbeamercolor{footline text}{fg=white}
+
+\setbeamercolor{framesubtitle}{fg=blue, bg=gray}
+
+\setbeamercolor*{normal text}{fg=black, bg=uasilver}
+\setbeamercolor*{block body}{fg=black,bg=white}
+\setbeamercolor*{block title}{fg=white,bg=uablue}
+\setbeamerfont{block title}{size=\large,series=\bf} %series=\sc\bf
+
+% \setbeamertemplate{blocks}[rounded][shadow=true]
+
+% \setbeamertemplate{itemize items}[triangle]
+\setbeamertemplate{navigation symbols}{}  % no navigation on a poster
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{block begin}{
+  \vskip.5ex
+  \begin{beamercolorbox}[rounded=true,shadow=true,leftskip=1ex,colsep*=.5ex]{block title}%
+    \usebeamerfont*{block title}{\Large \insertblocktitle}
+  \end{beamercolorbox}%
+  {\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
+  \usebeamerfont{block body}%
+  \begin{beamercolorbox}[rounded=true,shadow=true,colsep*=.5ex,sep=.5ex,vmode]{block body}%
+    \ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.5ex}\vbox{}%
+  }
+  \setbeamertemplate{block end}{
+  \end{beamercolorbox}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{headline}{
+  \leavevmode
+
+  \begin{beamercolorbox}[wd=\paperwidth]{headline}
+    \begin{columns}[T]
+      \begin{column}{.02\paperwidth}
+      \end{column}
+      \begin{column}{.24\paperwidth}
+        \centering
+        \vspace{2.4em}
+        \includegraphics[height=0.05\paperwidth]{ua-logo}
+        \vspace{2em}
+      \end{column}
+      \begin{column}{.7\paperwidth}
+      	\centering
+        \vspace{2.6em}
+        \usebeamercolor{headline text}{\color{fg}\textbf{\normalsize{COLLEGE OF ENGINEERING DEPARTMENT OF}\\[1ex]\LARGE{Electrical and Computer Engineering}}}
+      \end{column}
+      \begin{column}{.04\paperwidth}
+      \end{column}
+    \end{columns}
+  \end{beamercolorbox}
+
+  \begin{beamercolorbox}[wd=\paperwidth]{separation line}
+    \rule{0pt}{2pt}
+  \end{beamercolorbox}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{footline}{
+  \begin{beamercolorbox}[wd=\paperwidth]{separation line}
+    \rule{0pt}{2pt}
+  \end{beamercolorbox}
+  \leavevmode%
+  \begin{beamercolorbox}[ht=4ex,leftskip=1cm,rightskip=1cm]{footline}%
+    \usebeamercolor{footline text}{\color{fg} \normalsize{http://www.arizona.edu/}}
+    \hfill
+    \usebeamercolor{footline text}{\color{fg} \normalsize{http://ece.arizona.edu/}}
+  \end{beamercolorbox}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Display a grid to help align images
+%\beamertemplategridbackground[1cm]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \Mode<all>
